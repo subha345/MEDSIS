@@ -1,0 +1,596 @@
+{
+	"tabs": [{
+			"name": "Patient",
+			"options": [{
+					"name": "New Patient Registration",
+					"options": "null"
+				},
+				{
+					"name": "Registered (Patient Portal)",
+					"options": "null"
+				},
+				{
+					"name": "Patient Search",
+					"options": "null"
+				},
+				{
+					"name": "Patient Search (Lite)",
+					"options": "null"
+				},
+				{
+					"name": "Patient Search (Advanced)",
+					"options": "null"
+				},
+				{
+					"name": "Import Patient(CCD/CCR)",
+					"options": "null"
+				},
+				{
+					"name": "Merge and Inactive",
+					"options": "null"
+				},
+				{
+					"name": "Patient Schedule List",
+					"options": "null"
+				},
+				{
+					"name": "Pending Follow-Ups",
+					"options": "null"
+				},
+				{
+					"name": "Pending Referrals",
+					"options": "null"
+				}
+			]
+		},
+		{
+			"name": "Schedule",
+			"options": [{
+					"name": "Provider Schedule",
+					"options": "null"
+				},
+				{
+					"name": "Provider Slots",
+					"options": "null"
+				},
+				{
+					"name": "Encounter",
+					"options": "null"
+				},
+				{
+					"name": "Patient Appointments",
+					"options": "null"
+				},
+				{
+					"name": "Schedule Book",
+					"options": "null"
+				},
+				{
+					"name": "Available Slots",
+					"options": "null"
+				},
+				{
+					"name": "Walkins",
+					"options": "null"
+				},
+				{
+					"name": "Set No-Shows",
+					"options": "null"
+				},
+				{
+					"name": "Service Estimate",
+					"options": "null"
+				},
+				{
+					"name": "Pre-Orders",
+					"options": "null"
+				},
+				{
+					"name": "Patient Portal Appointments",
+					"options": "null"
+				},
+				{
+					"name": "Incomplete",
+					"options": "null"
+				},
+				{
+					"name": "PFilm Tracking",
+					"options": "null"
+				},
+				{
+					"name": "Current Payments",
+					"options": "null"
+				}
+
+			]
+		},
+		{
+			"name": "Billing",
+			"options": [{
+					"name": "Payments",
+					"options": "null"
+				},
+				{
+					"name": "File Claims",
+					"options": "null"
+				},
+				{
+					"name": "Claim Management",
+					"options": "null"
+				},
+				{
+					"name": "Refund",
+					"options": "null"
+				}
+
+			]
+		},
+		{
+			"name": "Report",
+			"options": [{
+					"name": "Schedule",
+					"options": [{
+							"name": "Daily Schedules"
+						},
+						{
+							"name": "Completed"
+						},
+						{
+							"name": "Incomplete"
+						},
+						{
+							"name": "By Doctor"
+						},
+						{
+							"name": "By Status"
+						},
+						{
+							"name": "By Transportation"
+						},
+						{
+							"name": "Walkin"
+						},
+						{
+							"name": "Export Complete Studies"
+						}
+					]
+				},
+				{
+					"name": "Study mareked as printed",
+					"options": [{
+							"name": "By Appointment Type"
+						},
+						{
+							"name": "By Appointment Type(Detailed)"
+						},
+						{
+							"name": "Studies Count"
+						},
+						{
+							"name": "Studies by CPT"
+						},
+						{
+							"name": "Approved Studies"
+						}
+					]
+				},
+				{
+					"name": "Patient",
+					"options": [{
+							"name": "Patient Form"
+						},
+						{
+							"name": "Patient WorkSheet"
+						}
+					]
+				},
+				{
+					"name": "Referring Physician",
+					"options": [{
+							"name": "Format 1"
+						},
+						{
+							"name": "Format 2"
+						},
+						{
+							"name": "Format 3"
+						},
+						{
+							"name": "By Marketing Representative"
+						}
+					]
+				},
+				{
+					"name": "CMS Quality Reporting",
+					"options": "null"
+				},
+				{
+					"name": "Provider",
+					"options": [{
+							"name": "Charges By Facility"
+						},
+						{
+							"name": "Charges By Provider"
+						},
+						{
+							"name": "Payment Details"
+						},
+						{
+							"name": "Payment Summary"
+						},
+						{
+							"name": "AR Aging Summary"
+						},
+						{
+							"name": "Facility Summary"
+						},
+						{
+							"name": "Provider Summary"
+						},
+						{
+							"name": "Aged Encounters"
+						},
+						{
+							"name": "Patient Statements"
+						},
+						{
+							"name": "Insurance Payment"
+						}
+					]
+				},
+				{
+					"name": "Fax Queue",
+					"options": "null"
+				},
+				{
+					"name": "Email Queue",
+					"options": "null"
+				},
+				{
+					"name": "Print Queue",
+					"options": "null"
+				},
+				{
+					"name": "Email Queue (Patient Portal)",
+					"options": "null"
+				},
+				{
+					"name": "Estimation Faxes",
+					"options": "null"
+				}
+
+			]
+		}, {
+			"name": "Setup",
+			"options": [{
+					"name": "Offices",
+					"options": [{
+							"name": "Corporate Office"
+						},
+						{
+							"name": "Service Office"
+						},
+						{
+							"name": "Office Location"
+						}
+					]
+				},
+				{
+					"name": "Referring Physician",
+					"options": [{
+							"name": "Physician List"
+						},
+						{
+							"name": "Physician Group"
+						}
+					]
+				},
+				{
+					"name": "Radiology",
+					"options": [{
+							"name": "Speciality"
+						},
+						{
+							"name": "Radiologist"
+						},
+						{
+							"name": "Technologist"
+						},
+						{
+							"name": "Schedule Hours"
+						},
+						{
+							"name": "Schedule Book Filter"
+						},
+						{
+							"name": "Modality Rooms"
+						},
+						{
+							"name": "Block Schedule"
+						},
+						{
+							"name": "Status Validation"
+						}
+					]
+				},
+				{
+					"name": "Practice Settings",
+					"options": [{
+							"name": "Provider"
+						},
+						{
+							"name": "Schedule Template"
+						},
+						{
+							"name": "Procedure"
+						},
+						{
+							"name": "Procedure Category"
+						},
+						{
+							"name": "Appointment Type"
+						},
+						{
+							"name": "Lab Procedures"
+						},
+						{
+							"name": "Lab Service Provider"
+						},
+						{
+							"name": "Office Settings"
+						},
+						{
+							"name": "Allergy Groups"
+						},
+						{
+							"name": "Vaccines"
+						},
+						{
+							"name": "Immunization Chart Setup"
+						},
+						{
+							"name": "Review of Systems(ROS)"
+						},
+						{
+							"name": "Medical History"
+						},
+						{
+							"name": "EDI Templates"
+						}
+					]
+				},
+				{
+					"name": "Patient Portal",
+					"options": [{
+							"name": "Patient Portal Settings"
+						},
+						{
+							"name": "Email Templates"
+						},
+						{
+							"name": "Gateway Information"
+						},
+						{
+							"name": "Image Options"
+						},
+						{
+							"name": "Portal Page Settings"
+						},
+						{
+							"name": "Portal Fields"
+						},
+						{
+							"name": "Consent Form(Kiosk)"
+						}
+					]
+				},
+				{
+					"name": "Insurance Setup",
+					"options": [{
+							"name": "Provider List"
+						},
+						{
+							"name": "Plan"
+						},
+						{
+							"name": "Play Rate"
+						},
+						{
+							"name": "Authorization"
+						}
+					]
+				},
+				{
+					"name": "CPT",
+					"options": [{
+							"name": "Provider List"
+						},
+						{
+							"name": "Plan"
+						},
+						{
+							"name": "Play Rate"
+						},
+						{
+							"name": "Authorization"
+						}
+					]
+				},
+				{
+					"name": "Report Format",
+					"options": [{
+							"name": "Stydy Report"
+						},
+						{
+							"name": "Templates"
+						}
+					]
+				},
+				{
+					"name": "Structured Reporting",
+					"options": [{
+							"name": "Templates"
+						},
+						{
+							"name": "Keywords"
+						},
+						{
+							"name": "Auto Suggestions"
+						},
+						{
+							"name": "Auto Hotspots"
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"options": [{
+							"name": "Modules"
+						},
+						{
+							"name": "User Groups"
+						},
+						{
+							"name": "Facility Users"
+						},
+						{
+							"name": "Patient Portal Users"
+						}
+					]
+				},
+				{
+					"name": "Settings",
+					"options": [{
+							"name": "Config"
+						},
+						{
+							"name": "System Settings"
+						},
+						{
+							"name": "Local Settings"
+						},
+						{
+							"name": "Login Page Settings"
+						},
+						{
+							"name": "My Settings"
+						}
+					]
+				},
+				{
+					"name": "Contract",
+					"options": "null"
+				},
+				{
+					"name": "Diagnosis",
+					"options": "null"
+				},
+				{
+					"name": "Appointment Type",
+					"options": "null"
+				},
+				{
+					"name": "Exam Preparation & Alert",
+					"options": "null"
+				},
+				{
+					"name": "Clinical Decision Rules",
+					"options": "null"
+				},
+				{
+					"name": "Patient Alerts",
+					"options": "null"
+				},
+				{
+					"name": "Security Audit",
+					"options": "null"
+				},
+				{
+					"name": "Audit Log",
+					"options": "null"
+				}
+
+			]
+		},
+		{
+			"name": "Interface",
+
+			"options": [{
+					"name": "HL7",
+
+					"options": [{
+							"name": "New Setup"
+						},
+						{
+							"name": "Change Rules"
+						},
+						{
+							"name": "Map Fields"
+						},
+						{
+							"name": "Submit Immunizations"
+						}
+					]
+				},
+				{
+					"name": "DICOM",
+
+					"options": [{
+							"name": "QR Server Settings"
+						},
+						{
+							"name": "Map Fields"
+						}
+					]
+				},
+				{
+					"name": "EDI",
+
+					"options": [{
+							"name": "Eligibility(270)"
+						},
+						{
+							"name": "Authorization(278)"
+						}
+					]
+				},
+				{
+					"name": "B2B",
+
+					"options": [{
+							"name": "Account Setup"
+						},
+						{
+							"name": "Transactions"
+						}
+					]
+				},
+				{
+					"name": "RCopia",
+
+					"options": [{
+							"name": "URL History"
+						},
+						{
+							"name": "Transactions"
+						},
+						{
+							"name": "Log"
+						}
+					]
+				},
+				{
+					"name": "eFax Setup",
+
+					"options": "null"
+				},
+				{
+					"name": "CMS Registry Information",
+
+					"options": "null"
+				}
+
+			]
+		}
+	]
+}
