@@ -3451,10 +3451,9 @@ tbody.collapse.in {
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  color: #fff;
-  background-color:#399bff;
+  color: #262626;
   text-decoration: none;
-  /*background-color: #f5f5f5;*/
+  background-color: #f5f5f5;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,

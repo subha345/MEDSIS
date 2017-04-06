@@ -10,7 +10,8 @@ import { Provider } from 'react-redux';
 import '../css/font-awesome.min.css'
 import './stylessheet/components/sidepanel.css'
 import '../css/root.css'
-
+import Register from './components/register/register.jsx'
+// import '../js/modernizr.custom'
 const store=configureStore();
 
 ReactDOM.render(

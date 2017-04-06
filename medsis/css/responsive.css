@@ -1,30 +1,33 @@
-
 /* =================================================================================
 smaller than 1280 
 ================================================================================= */
 @media screen and (max-width: 1280px) {
 	/*.topmenu{display: none;}*/
+	.mobilemenu{display:none;}
 }
 
 /* =================================================================================
 smaller than 1024 
 ================================================================================= */
 @media screen and (max-width: 1024px) {
+
 	.profilebox b{display: none;}
 	.searchform{display: none;}
 	.sidebar{display: none;}
-	.content{margin-left: 0 !important;}
-	.sidebar-open-button{display: none;}
-	.sidebar-open-button-mobile{display: block;}
+	/*.sidebar-open-button{display: none;}
+	.sidebar-open-button-mobile{display: block;}*/
 	.social-stats{bottom: 100px;}
 	.topstats li{width: 33%;}
 	.demo-sidebarmenu .sidebar{display: block;}
+	.mobilemenu{display:none;}
+	#msform fieldset{padding:0px;width:100%;}
 }
 
 /* =================================================================================
 smaller than 760 
 ================================================================================= */
 @media screen and (max-width: 760px) {
+	.topmenu{display: none;}
 	.page-header .right{display: none;}
 	.sidebar{display: none; width: 100%;}
 	.presentation .list{float: left; margin-top: 20px;}
@@ -37,12 +40,16 @@ smaller than 760
 	.chat .title{height: auto;}
 	.profile-left .btn{display: none;}
 	.topstats li{width: 50%;}
+	.sidebar-open-button{display: none;}
+	.sidebar-open-button-mobile{display: block;}	
+	.mobilemenu{display:block !important;}
+	#msform fieldset{padding:0px;}
 }
 
 /* =================================================================================
 smaller than 428 
 ================================================================================= */
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 480px) {
 	.top-right{display: none;}
 	.applogo{
 		padding-left: 0;
@@ -52,9 +59,18 @@ smaller than 428
 		width: 100%;
 		z-index: -4;
 	}
+	.mobilemenu{display:block !important;}
+	.gridsection{padding-left:0;}
+	.grid{padding-left:0px !important;}
 	.topstats li{width: 100%;}
+	.content{margin-left:0px;}
+	#theGrid, .content {
+    padding-left: 10px !important;}
+	.container-default, .container-widget {
+		margin-left: 3px;
+		margin-right: -20px;
+	}	
+	.topmenu{display: block;}
+	.content{margin-left: 0px;}
+	#msform fieldset{padding:0px;}
 }
-
-
-
-
