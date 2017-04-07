@@ -6,7 +6,7 @@
 		2) Download the project and run "npm start" on terminal from "medsis" folder.
 		3) It will run the project on "http://localhost:3000" and open your default browser automatically.
 
-> HOW RUN THE BUILD FOLDER?
+> HOW TO RUN THE BUILD FOLDER?
 	
 		1) Install "serve" through npm 
 			
