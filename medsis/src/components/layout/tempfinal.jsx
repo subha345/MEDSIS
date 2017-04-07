@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Login from '../loginform/login.jsx'
-import TempLayout from './templayout.jsx'
+import LoginPage from './templayout.jsx'
 
 const mapStateToProps = state =>
     ({
@@ -11,9 +11,10 @@ const mapStateToProps = state =>
 class TempRender extends Component {
     render() {
         const { logoutState } = this.props
+        console.log({logoutState})
         return (
             <div>
-                {(logoutState) ? <Login /> : <TempLayout />}
+                {(logoutState) ? <Login /> : <LoginPage />}
             </div>
         );
     }

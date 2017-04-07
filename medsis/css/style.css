@@ -666,7 +666,7 @@ Sidepanel
 .sidepanel {
   z-index: 9999;
   position: fixed;
-  display: none;
+  /*display: none;*/
   width: 300px;
   top: 60px;
   bottom: 0;

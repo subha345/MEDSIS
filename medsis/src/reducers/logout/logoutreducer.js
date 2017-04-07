@@ -1,4 +1,4 @@
-export default function logoutStateReducer(state = { logoutState : false }, action){
+export default function logoutStateReducer(state = { logoutState : true }, action){
     switch(action.type){
         case 'LOGOUT_STATE':
         return {
