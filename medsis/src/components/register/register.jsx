@@ -71,13 +71,15 @@ class Register extends Component {
 
     render() {
         return (
-            <form id="msform" >
+            <div className="register">
+            <form id="msform" style={{marginTop:"62px"}}>
                 <ProgressBar />
                 <AccountSetup />
                 <SocialProfile />
                 <PersonalInfo />
                 <PersonalDetail />
             </form >
+            </div>
         );
     }
 }

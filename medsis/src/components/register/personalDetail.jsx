@@ -1,7 +1,28 @@
 import React from 'react';
+import { Link } from 'react-router'
+import { connect } from 'react-redux';
+import * as actions from '../../actions/actions';
 
-const PersonalDetail = () => {
-    return (
+const mapStateToProps = state =>
+    ({
+        loginState:state.loginStateReducer.loginState
+    })
+
+const mapDispatchToProps = dispatch =>
+    ({
+        fetchLoginState(state) {
+            dispatch(
+                actions.loginStateAction(state)
+            )
+        }
+    })
+
+class PersonalDetail extends React.Component {
+changeLoginState() {
+		this.props.fetchLoginState(true)
+	}
+	render(){
+		return (
         <fieldset>
 			<h2 className="fs-title">Emergency Contact</h2>
 			<h3 className="fs-subtitle">We will never sell </h3>
@@ -39,9 +60,12 @@ const PersonalDetail = () => {
 				<hr style={{margin:"15px 0 10px 0"}}/>
 			</div>				
 			<input type="button" name="previous" className="previous action-button" value="Previous" />
-			<a className="btn action-button" style={{marginTop:"5px"}}> Submit </a>
+			<Link to='/dashboard' className="btn action-button" style={{marginTop:"5px"}} onClick={this.changeLoginState.bind(this)}> Submit </Link>
 		</fieldset>
     );
+	}
+    
 };
 
-export default PersonalDetail;
+const PersonalDetails = connect(mapStateToProps, mapDispatchToProps)(PersonalDetail);
+export default PersonalDetails;

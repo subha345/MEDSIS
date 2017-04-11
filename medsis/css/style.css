@@ -391,6 +391,10 @@ Top Menu
 .topmenu li {
   display: inline;
 }
+.navbar-inverse {
+    background-color: #1a75bb;
+    border-color: #1a75bb;
+}
 /* =================================================================================
 Sidepanel Open Button - Show or Hide Sidepanel
 ================================================================================= */
@@ -1744,14 +1748,25 @@ Invoice
   top: 50px;
   position: absolute;
 }
+.register{
+  background-image: url('../img/bghapp2.jpg');
+  height:590px;
+  background-size:cover
+}
 /* =================================================================================
 Login Pages
 ================================================================================= */
+.loginformbg{
+  background-image: url('../img/bglogin.png');
+  height:650px;
+  background-size:cover
+}
 .login-form {
   width: 360px;
   padding-top: 100px;
   margin: 0px auto;
   text-shadow: none;
+  
 }
 .login-form form {
   background: #fff;

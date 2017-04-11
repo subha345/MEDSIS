@@ -1,5 +1,5 @@
 export function tabServiceApi(actionCallback){
-    fetch('../../config/configtab.json')
+    fetch('../../config/tabapi.json')
     .then(response=> response.json())
     .then(json=>actionCallback(json));
 }
