@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import logobig from '../../../img/logobig.png'
 import {browserHistory} from 'react-router';
 
-class ForgotPassword extends Component {
+class OtpPage extends Component {
     constructor(props){
         super(props);
         this.state={
-            username:'',
-            mobile:''
+            otp:""
         }
         this.handleChange=this.handleChange.bind(this)
         this.onSubmit=this.onSubmit.bind(this)
@@ -18,12 +17,12 @@ class ForgotPassword extends Component {
         })
     }
     onSubmit(){
-        browserHistory.push('/otp');
         console.log(this.state)
+        browserHistory.push('/changepassword');
     }
     render() {
         return (
-                 <div className="loginformbg">
+            <div className="loginformbg">
         <div className="login-form">
             <div className="">
                 <center><img src={logobig} alt="img"/></center><br />
@@ -35,18 +34,8 @@ class ForgotPassword extends Component {
                             value={this.state.username}
                             type="text" 
                             className="form-control" 
-                            placeholder="Username" name="username" 
+                            placeholder="otp" name="otp" 
                             onChange={this.handleChange} required/>
-                        <i className="fa fa-user"></i>
-                    </div>
-                    <div className="group">
-                           <input 
-                            value={this.state.mobile}
-                            type="text" 
-                            className="form-control" 
-                            placeholder="mobile" name="mobile" 
-                            onChange={this.handleChange} required/>
-                        <i className="fa fa-key"></i>
                     </div>
                     <a><button type="submit" className="btn btn-default btn-block">SUBMIT</button></a>
                 </div>
@@ -58,4 +47,4 @@ class ForgotPassword extends Component {
     }
 }
 
-export default ForgotPassword;
+export default OtpPage;

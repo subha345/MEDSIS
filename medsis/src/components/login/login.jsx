@@ -3,7 +3,6 @@ import logobig from '../../../img/logobig.png'
 import { Link } from 'react-router'
 import { connect } from 'react-redux';
 import * as actions from '../../actions/actions';
-// import Form from 'react-router-form';
 import {browserHistory} from 'react-router';
 
 const mapStateToProps = state =>
@@ -42,9 +41,9 @@ class Login extends Component {
     }
     onSubmit(e){
         e.preventDefault();
-        this.props.userDetail(this.state)
          this.props.fetchLoginState(true)
          browserHistory.push('/dashboard');
+         this.props.fetchLoginState(true)
          console.log(this.state)
         
     }
@@ -55,10 +54,14 @@ class Login extends Component {
             <div className="">
                 <center><img src={logobig} alt="img"/></center><br />
             </div>
+            <div style={{color:"red",display:"none"}} id="invalid">
+                        <p>Please Login...</p>
+                    </div>
             <form onSubmit={this.onSubmit}>
                 <div className="form-area">
                     <div className="group">
                         <input 
+                            ref="username"
                             value={this.state.username}
                             type="text" 
                             className="form-control" 
@@ -68,6 +71,7 @@ class Login extends Component {
                     </div>
                     <div className="group">
                            <input 
+                            ref="password"
                             value={this.state.password}
                             type="text" 
                             className="form-control" 

@@ -38,7 +38,7 @@ class RightTab extends Component {
         console.log(loginState)
         let tabs = (loginState) ? (
             <div>
-                <Link to='/sidepanel' className="sidepanel-open-button" id="menu-toggle"><i className="fa fa-outdent"></i></Link>
+                <a className="sidepanel-open-button" id="menu-toggle"><i className="fa fa-outdent"></i></a>
                 <ul className="top-right">
                     <li className="link">
 				        <a href="#" className="notifications">6</a>

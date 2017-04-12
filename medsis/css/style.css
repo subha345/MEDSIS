@@ -15,7 +15,7 @@ body {
   background: #D5EAFF;
 }
 a {
-  color: #399bff;
+  color: white;
   text-decoration: none;
 }
 a:hover,
@@ -1759,7 +1759,8 @@ Login Pages
 .loginformbg{
   background-image: url('../img/bglogin.png');
   height:650px;
-  background-size:cover
+  background-size:cover;
+  overflow: hidden
 }
 .login-form {
   width: 360px;

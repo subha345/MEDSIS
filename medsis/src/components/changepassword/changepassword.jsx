@@ -1,13 +1,31 @@
 import React, { Component } from 'react';
 import logobig from '../../../img/logobig.png'
 import {browserHistory} from 'react-router';
+import { connect } from 'react-redux';
+import * as actions from '../../actions/actions';
 
-class ForgotPassword extends Component {
+const mapStateToProps = state =>
+    ({
+        loginState:state.loginStateReducer.loginState
+    })
+
+const mapDispatchToProps = dispatch =>
+    ({
+        fetchLoginState(state) {
+            dispatch(
+                actions.loginStateAction(state)
+            )
+        }
+    })
+
+
+
+class ChangePassword extends Component {
     constructor(props){
         super(props);
         this.state={
-            username:'',
-            mobile:''
+            newPassword:"",
+            confirmPassword:""
         }
         this.handleChange=this.handleChange.bind(this)
         this.onSubmit=this.onSubmit.bind(this)
@@ -17,13 +35,16 @@ class ForgotPassword extends Component {
             [e.target.name] : e.target.value
         })
     }
-    onSubmit(){
-        browserHistory.push('/otp');
+    onSubmit(e){
+        e.preventDefault();
         console.log(this.state)
+        this.props.fetchLoginState(true)
+        browserHistory.push('/dashboard')
+        // this.props.fetchLoginState(true)
     }
     render() {
         return (
-                 <div className="loginformbg">
+            <div className="loginformbg">
         <div className="login-form">
             <div className="">
                 <center><img src={logobig} alt="img"/></center><br />
@@ -32,21 +53,19 @@ class ForgotPassword extends Component {
                 <div className="form-area">
                     <div className="group">
                         <input 
-                            value={this.state.username}
+                            value={this.state.newPassword}
                             type="text" 
                             className="form-control" 
-                            placeholder="Username" name="username" 
+                            placeholder="New Password" name="newPassword" 
                             onChange={this.handleChange} required/>
-                        <i className="fa fa-user"></i>
                     </div>
                     <div className="group">
-                           <input 
-                            value={this.state.mobile}
+                        <input 
+                            value={this.state.confirmPassword}
                             type="text" 
                             className="form-control" 
-                            placeholder="mobile" name="mobile" 
+                            placeholder="Confirm Password" name="confirmPassword" 
                             onChange={this.handleChange} required/>
-                        <i className="fa fa-key"></i>
                     </div>
                     <a><button type="submit" className="btn btn-default btn-block">SUBMIT</button></a>
                 </div>
@@ -58,4 +77,5 @@ class ForgotPassword extends Component {
     }
 }
 
-export default ForgotPassword;
+const ChangePasswd = connect(mapStateToProps , mapDispatchToProps)(ChangePassword);
+export default ChangePasswd;

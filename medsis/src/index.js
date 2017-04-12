@@ -9,6 +9,7 @@ import { Router , browserHistory} from 'react-router'
 import Routes from'./routes'
 import configureStore from './stores/configurestore';
 import { Provider } from 'react-redux';
+import './stylesheet/components/navbar.css'
 
 const store=configureStore();
 
