@@ -1,20 +1,19 @@
 import { loginRequest } from '../../services/userloginreq'
 
-function getUserDetail(userDetail){
+function getUserDetail(responseJson){
     return{
-        type:"USER_DETAIL",
-        userDetail
+        type:"LOGIN_RESPONSE",
+        responseJson
     }
 }
 
-export const userLoginRequestAction = (userDetail) => dispatch => {
-    let userDetail = userDetail;
+export const userLoginRequestAction = (userDetails) => (dispatch) => {
+    let userDetail = userDetails;
+    let responseJson;
     loginRequest(userDetail, (data) => {
-        if (data) {
-           console.log(data)
-            } else {
-            console.log("Request Failed")
-        }
-        dispatch(getUserDetail(userDetail));
+        // console.log(data.status)
+        (data) ?  responseJson=data.status : console.log("Request Failed")
+        // console.log(responseJson)
+        dispatch(getUserDetail(responseJson));
     });
 }

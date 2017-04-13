@@ -1,14 +1,14 @@
 export function loginRequest(userDetail, actionCallback) {
-    fetch('/userDetail', {
+    fetch('https://dev.health5c.com:8443/ccp-services/authenticate', {
             method: 'POST',
             headers: new Headers({
-                'Authorization': '',
-                'Content-Type': 'application/json',
-                'Data-Type': "json"
+                'Content-Type': 'application/json'
             }),
-            body: JSON.stringify({
-                "user": userDetail
-            }),
+            body:JSON.stringify({
+                "userName":userDetail.userName,
+                "password":userDetail.password
+            })
+    
         }).then(response => response.json())
-        .then(json => actionCallback(json));
+        .then(json => actionCallback(json))
 }

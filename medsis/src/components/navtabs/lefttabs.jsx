@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import Tab from './tabs'
 import { connect } from 'react-redux';
 import * as actions from '../../actions/actions';
-import { Link } from 'react-router'
 
 const mapStateToProps = state =>
     ({
         tabState:state.tabListReducer.tabState,
-        loginState:state.loginStateReducer.loginState
+        loginState:state.loginStateReducer.loginState,
+        responseJson:state.loginResponseReducer.responseJson
     })
 
 const mapDispatchToProps = dispatch =>
@@ -21,9 +21,9 @@ const mapDispatchToProps = dispatch =>
 
 class LeftTab extends Component {
     render() {
-        const { loginState } = this.props
+        const { responseJson, loginState } = this.props
         const { tabState } = this.props
-        let tabs = (loginState) ? (
+        let tabs = (responseJson==="$200" && loginState) ? (
             <ul className="nav navbar-nav tabpadding">
                 {tabState.map((value, index) =>
                     <Tab key={index} {...value} />

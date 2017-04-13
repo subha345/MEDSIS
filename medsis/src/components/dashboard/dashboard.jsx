@@ -9,7 +9,8 @@ import Login from '../login/login'
 
 const mapStateToProps = state =>
     ({
-        loginState:state.loginStateReducer.loginState
+        loginState:state.loginStateReducer.loginState,
+		responseJson:state.loginResponseReducer.responseJson
     })
 
 class DashBoard extends Component {
@@ -33,9 +34,9 @@ class DashBoard extends Component {
 	}
 	
     render() {
-		const { loginState } = this.props
+		const { responseJson,loginState } = this.props
         return (
-			(loginState) ? (
+			(responseJson==="$200" && loginState) ? (
 			<div id="wrapper">
             <div className="content">
 		<div className="page-header">

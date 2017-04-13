@@ -6,7 +6,8 @@ import profileimg from '../../../img/profileimg.png'
 
 const mapStateToProps = state =>
     ({
-        loginState:state.loginStateReducer.loginState
+        loginState:state.loginStateReducer.loginState,
+        responseJson:state.loginResponseReducer.responseJson
     })
 
 const mapDispatchToProps = dispatch =>
@@ -34,9 +35,9 @@ class RightTab extends Component {
     }
     
     render() {
-        const { loginState } = this.props
-        console.log(loginState)
-        let tabs = (loginState) ? (
+        const { responseJson,loginState } = this.props
+        console.log(responseJson)
+        let tabs = (responseJson==="$200" && loginState) ? (
             <div>
                 <a className="sidepanel-open-button" id="menu-toggle"><i className="fa fa-outdent"></i></a>
                 <ul className="top-right">

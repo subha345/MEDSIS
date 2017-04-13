@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import Nav from './navigationbar/navigationbar.jsx'
-import SidePanel from './sidepanel/sidepanel.jsx'
+import $ from 'jquery'
 
 
 class Application extends Component {
+  componentDidMount() {
+
+      $( this.refs.toggleInput.getDOMNode ).bootstrapToggle();
+
+    
+  }
+  
   render() {
     return (
      <div>

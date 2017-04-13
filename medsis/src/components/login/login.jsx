@@ -7,7 +7,8 @@ import {browserHistory} from 'react-router';
 
 const mapStateToProps = state =>
     ({
-        loginState:state.loginStateReducer.loginState
+        loginState:state.loginStateReducer.loginState,
+        responseJson:state.loginResponseReducer.responseJson
     })
 
 const mapDispatchToProps = dispatch =>
@@ -17,7 +18,7 @@ const mapDispatchToProps = dispatch =>
                 actions.loginStateAction(state)
             )
         },
-        userDetail(userDetail) {
+        userDetails(userDetail) {
             dispatch(
                 actions.userLoginRequestAction(userDetail)
             )
@@ -28,12 +29,18 @@ class Login extends Component {
     constructor(props){
         super(props);
         this.state={
-            username:'',
+            userName:'',
             password:''
         }
         this.inputChangeHandler = this.inputChangeHandler.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
     }
+     componentDidUpdate() {
+		if(this.props.loginState){
+			let div= document.getElementById('invalid1')
+    		div.style.display="block"
+		}
+	}
     inputChangeHandler(e){
         this.setState({
             [e.target.name] : e.target.value
@@ -41,10 +48,12 @@ class Login extends Component {
     }
     onSubmit(e){
         e.preventDefault();
+        this.props.userDetails(this.state)
          this.props.fetchLoginState(true)
          browserHistory.push('/dashboard');
-         this.props.fetchLoginState(true)
-         console.log(this.state)
+        //  this.props.fetchLoginState(true)
+        //  console.log(this.state)
+         
         
     }
     render() {
@@ -62,10 +71,10 @@ class Login extends Component {
                     <div className="group">
                         <input 
                             ref="username"
-                            value={this.state.username}
+                            value={this.state.userName}
                             type="text" 
                             className="form-control" 
-                            placeholder="Username" name="username" 
+                            placeholder="userName" name="userName" 
                             onChange={this.inputChangeHandler} required/>
                         <i className="fa fa-user"></i>
                     </div>
@@ -75,12 +84,12 @@ class Login extends Component {
                             value={this.state.password}
                             type="text" 
                             className="form-control" 
-                            placeholder="Password" name="password" 
+                            placeholder="password" name="password" 
                             onChange={this.inputChangeHandler} required/>
                         <i className="fa fa-key"></i>
                     </div>
-                    <div style={{color:"red",display:"none"}} id="invalid">
-                        <p>Place valid input credential</p>
+                    <div style={{color:"red",display:"none"}} id="invalid1">
+                        <p>invalid credentials...</p>
                     </div>
                     <div className="checkbox checkbox-primary">
                         <input id="checkbox101" type="checkbox" defaultChecked />

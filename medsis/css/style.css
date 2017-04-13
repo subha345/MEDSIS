@@ -5994,7 +5994,7 @@ font-variant: normal;line-height:1;
 	position: relative;
 }
 #msform fieldset {
-	background: white;
+	background: peachpuff;
 	border: 0 none;
 	border-radius: 3px;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
@@ -6054,7 +6054,7 @@ font-variant: normal;line-height:1;
 }
 /*progressbar*/
 #progressbar {
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 	overflow: hidden;
 	/*CSS counters to number the steps*/
 	counter-reset: step;
