@@ -4,6 +4,8 @@ import { Link } from 'react-router'
 import { connect } from 'react-redux';
 import * as actions from '../../actions/actions';
 import {browserHistory} from 'react-router';
+import $ from 'jquery'
+import '../../stylesheet/components/login.css'
 
 const mapStateToProps = state =>
     ({
@@ -66,25 +68,25 @@ class Login extends Component {
             <div style={{color:"red",display:"none"}} id="invalid">
                         <p>Please Login...</p>
                     </div>
-            <form onSubmit={this.onSubmit}>
+            <form onSubmit={this.onSubmit} data-toggle="validator" role="form">
                 <div className="form-area">
-                    <div className="group">
+                    <div className="form-group">
                         <input 
-                            ref="username"
+                            id="username"
                             value={this.state.userName}
                             type="text" 
                             className="form-control" 
-                            placeholder="userName" name="userName" 
+                            placeholder="User Name" name="userName" 
                             onChange={this.inputChangeHandler} required/>
                         <i className="fa fa-user"></i>
                     </div>
-                    <div className="group">
+                    <div className="form-group">
                            <input 
-                            ref="password"
+                            id="password"
                             value={this.state.password}
                             type="text" 
                             className="form-control" 
-                            placeholder="password" name="password" 
+                            placeholder="Password" name="password" 
                             onChange={this.inputChangeHandler} required/>
                         <i className="fa fa-key"></i>
                     </div>
@@ -95,7 +97,9 @@ class Login extends Component {
                         <input id="checkbox101" type="checkbox" defaultChecked />
                         <label htmlFor="checkbox101"> Remember Me</label>
                     </div>
-                    <a><button type="submit" className="btn btn-default btn-block">LOGIN</button></a>
+                     <div className="form-group">
+                    <button id="login" type="submit" className="btn btn-primary btn-block">LOGIN</button>
+                    </div>
                 </div>
                 </form>
             <div className="footer-links row">

@@ -37,10 +37,15 @@ class ChangePassword extends Component {
     }
     onSubmit(e){
         e.preventDefault();
-        console.log(this.state)
-        this.props.fetchLoginState(true)
-        browserHistory.push('/dashboard')
-        // this.props.fetchLoginState(true)
+        const { confirmPassword, newPassword } = this.state
+        if(confirmPassword===newPassword){
+            document.getElementById('matched').style.display="block"
+            browserHistory.push('/dashboard')
+            this.props.fetchLoginState(true)
+            console.log(this.state.newPassword)
+        }else{
+            document.getElementById('notmatched').style.display="block"
+        }
     }
     render() {
         return (
@@ -49,10 +54,11 @@ class ChangePassword extends Component {
             <div className="">
                 <center><img src={logobig} alt="img"/></center><br />
             </div>
-            <form onSubmit={this.onSubmit} style={{marginTop:"65px"}}>
+            <form onSubmit={this.onSubmit} data-toggle="validator" role="form">
                 <div className="form-area">
-                    <div className="group">
+                    <div className="form-group">
                         <input 
+                            ref="password"
                             value={this.state.newPassword}
                             type="text" 
                             className="form-control" 
@@ -61,13 +67,22 @@ class ChangePassword extends Component {
                     </div>
                     <div className="group">
                         <input 
+                            ref="confirmPassword"
                             value={this.state.confirmPassword}
                             type="text" 
                             className="form-control" 
                             placeholder="Confirm Password" name="confirmPassword" 
                             onChange={this.handleChange} required/>
                     </div>
-                    <a><button type="submit" className="btn btn-default btn-block">SUBMIT</button></a>
+                    <div id="notmatched" style={{color:"red",display:"none"}}>
+                        Password didn't match
+                    </div>
+                    <div id="matched" style={{color:"green",display:"none"}}>
+                        Password matched
+                    </div>
+                    <div className="form-group">
+                        <button type="submit" className="btn btn-primary btn-block">SUBMIT</button>
+                    </div>
                 </div>
                 </form>
             </div>

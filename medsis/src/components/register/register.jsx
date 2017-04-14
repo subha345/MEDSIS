@@ -9,6 +9,7 @@ import '../../../js/jquery.easing.min.js'
 
 class Register extends Component {
     componentDidMount() {
+
         var current_fs, next_fs, previous_fs;
         var left, opacity, scale;
         var animating;
@@ -72,7 +73,7 @@ class Register extends Component {
     render() {
         return (
             <div className="register">
-            <form id="msform" style={{marginTop:"62px"}}>
+            <form id="msform" style={{marginTop:"62px"}} data-toggle="validator" role="form">
                 <ProgressBar />
                 <AccountSetup />
                 <SocialProfile />

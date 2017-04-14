@@ -27,17 +27,20 @@ class OtpPage extends Component {
             <div className="">
                 <center><img src={logobig} alt="img"/></center><br />
             </div>
-            <form onSubmit={this.onSubmit} style={{marginTop:"65px"}}>
+            <form onSubmit={this.onSubmit} data-toggle="validator" role="form">
                 <div className="form-area">
-                    <div className="group">
+                    <div className="form-group">
                         <input 
                             value={this.state.username}
                             type="text" 
                             className="form-control" 
                             placeholder="otp" name="otp" 
                             onChange={this.handleChange} required/>
+                            <i className="fa fa-key"></i>
                     </div>
-                    <a><button type="submit" className="btn btn-default btn-block">SUBMIT</button></a>
+                    <div className="form-group">
+                        <button type="submit" className="btn btn-primary btn-block">SUBMIT</button>
+                    </div>
                 </div>
                 </form>
             </div>

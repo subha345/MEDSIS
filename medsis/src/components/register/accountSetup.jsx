@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import $ from 'jquery'
+import '../../stylesheet/components/register.css'
 
 class AccountSetup extends Component {
-    componentDidUpdate() {
-        $('.toggleInput').bootstrapToggle();
-    }
     render() {
         return (
             <fieldset>
@@ -32,8 +29,10 @@ class AccountSetup extends Component {
                 <div className="form-group">
                     <label className="col-sm-4 control-label form-label text-right" >Gender</label>
                     <div className="col-sm-7 offset-col-1 floatlinner margin-b-5">
-                        <input type="checkbox" defaultChecked data-toggle="toggle" data-on="Male" data-off="Female" className="margin-b-5 " />
-                        <input ref="toggleInput" type="checkbox" data-toggle="toggle" data-on="On" data-off="Off" />
+                        <label>Male</label>
+                        <input id="male" type="radio" name="gender" defaultChecked style={{width:"35%"}} className="margin-b-5"/>
+                        <label>Female</label>
+                        <input id="female" type="radio" name="gender" style={{width:"35%"}} className="margin-b-5"/>
                     </div>
                 </div>
 

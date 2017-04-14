@@ -4,12 +4,6 @@ import $ from 'jquery'
 
 
 class Application extends Component {
-  componentDidMount() {
-
-      $( this.refs.toggleInput.getDOMNode ).bootstrapToggle();
-
-    
-  }
   
   render() {
     return (

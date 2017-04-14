@@ -1,0 +1,14 @@
+{
+  "httpHeaders": {
+    "chngPswd": "false",
+    "message": "Login Success",
+    "memberId": "51880",
+    "profUpdate": "true",
+    "h5cAuthToken": "4de353af-afca-4f18-9830-283589292eae"
+  },
+  "metadata": null,
+  "results": null,
+  "singleResult": true,
+  "status": "$200",
+  "count": null
+}
